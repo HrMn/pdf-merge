@@ -6,6 +6,9 @@ from PyPDF2 import PdfMerger
 UPLOAD_FOLDER = 'uploads'
 MERGED_FOLDER = 'merged'
 
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(MERGED_FOLDER, exist_ok=True)
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MERGED_FOLDER'] = MERGED_FOLDER
